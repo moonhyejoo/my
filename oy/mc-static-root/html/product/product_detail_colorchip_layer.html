@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:title" content="올리브영 모바일 메인"><!-- 사이트 명 -->
+	<meta property="og:url" content="http://"><!-- 사이트 URL -->
+	<meta property="og:image" content=""><!-- 대표 이미지 URL -->
+	<meta property="og:description" content=""><!-- 사이트 설명 -->
+	<title></title>
+	<link rel="stylesheet" href="../../css/global.css"/>
+	<link rel="stylesheet" href="../../css/common.css"/>
+	<link rel="stylesheet" href="../../css/board.css"/>
+	<link rel="stylesheet" href="../../css/contents.css"/>
+	<script type="text/javascript" src="../../js/common/publish/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../js/common/publish/content_ui.js"></script>
+	<script type="text/javascript" src="../../js/common/publish/swiper.min.js"></script>
+	<!-- <script type="text/javascript" src="../../js/common/jquery-1.8.3.min.js"></script> -->
+	<!-- <script type="text/javascript" src="../../js/prefixfree.min.js"></script> -->
+</head>
+<body class="bgw">
+
+<!-- popFullWrap -->
+<div class="pageFullWrap btnColorchip" id="colorchip_layer">
+	<!-- popHeader -->
+	<div class="popHeader">
+		<h1 class="popTitle">발색 비교</h1>
+		<a href="#" class="btnClose" onclick="popFullClose('colorchip_layer');">닫기</a>
+	</div>
+	<!-- //popHeader -->
+	<!-- popContainer -->
+	<div class="popContainer">
+		<!-- popCont -->
+		<div class="popCont">
+		
+			 <!--  colorchip grid -->
+			 <div class="color-chip-grid">
+				<!-- 안내 문구 -->
+				<div class="guide-area">
+					<ul>
+						<li>화면을 닫으시면 발색 비교한 정보는 사라집니다.</li>
+						<li>밝기에 따라 색상차이가 있을 수 있습니다.</li>
+					</ul>
+				</div>
+				<!-- // 안내 문구 -->
+				
+				<!--  grid -->
+	           <div class="grid-area">
+	           	<div class="no_result">
+	           		<img src="../../image/product/ico_color_compare.png" alt="color"/>
+	           		<p class="txt">발색 비교할 컬러를<br>선택해주세요</p>
+	           	</div>
+	           </div>
+	           <!--  //grid -->
+	         </div>
+	         <!--  colorchip grid -->
+	         
+	         <!--  bottom slide  -->
+	         <div class="slide_fixed">
+	         	<!--  slide  -->				
+				<div class="add-items-container swiper-container">
+		           <div class="swiper-wrapper">
+		             <!-- Slides -->
+		             <div class="swiper-slide"> 
+		               <a href="javascript:;" data-index="0" class="sold_out"> <!--  품절상품 -->
+		               	<span class="dim">soldout</span>
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634301ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="1">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634302ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="2">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634303ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="3">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634304ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="4">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634305ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="5">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634306ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="6">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634306ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="7">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634306ko.jpg?l=ko">
+		               </a>
+		             </div>
+		             <div class="swiper-slide">
+		               <a href="javascript:;" data-index="8">
+		                 <img alt="" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0013/A00000013634306ko.jpg?l=ko">
+		               </a>
+		             </div>
+		           </div>
+		           <!-- Add Scrollbar -->
+    			   <div class="swiper-scrollbar"></div>
+		         </div>
+				<!-- // slide  -->
+	         </div>
+			<!--  // bottom slide  -->
+		</div>
+		<!-- //popCont -->
+	</div>
+	<!-- //popContainer --->
+</div>
+<!-- //popFullWrap -->
+
+<script type="text/javascript" src="../../js/colorchip/web-animations.js"></script>
+<script type="text/javascript" src="../../js/colorchip/muuri.js"></script>
+<script type="text/javascript" src="../../js/colorchip/colorchip_ui.js"></script>
+<script>
+$(function(){
+	ColorChipsLayer.init();
+});
+
+</script>
+
+</body>
+</html>

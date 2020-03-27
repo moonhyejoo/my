@@ -1,0 +1,675 @@
+@charset "utf-8";
+
+/*
+	[개발/QA 도메인일 경우에만 <head>에 삽입되는 CSS]
+	1. 해당 파일 개발 및 QA용으로 운영 배포 금지
+	2. 해당 html에 <script type="text/javascript" src="../../js/common/publish/content_ui.js"></script>이 존재해야 실행됨
+	3. 개발 & QA용으로만 사용 시 해당 CSS 작성/배포하고
+	실제 운영 배포 기간일시 배포될 CSS에 작성한 머지 후 해당 CSS파일에서는 작성한 소스 삭제
+	4. 전담과제용으로 사용하되 기존 소스 변경 시 오버라이드 형식으로 작성 한 후 배포전 테스트 진행
+*/
+
+/* 박민호 S */
+/* #탑리뷰어 팝업 디자인 수정 board.css */
+.layerInner dl.txt_info .gbox{margin-top:7px;padding:10px 15px;background-color:#eee;}
+.layerInner dl.txt_info .gbox>ul{}
+.layerInner dl.txt_info .gbox>ul>li{float:none;width:100%;font-weight:bold;line-height:22px;}
+.layerInner dl.txt_info .gbox .txtpink{margin-top:4px;font-weight:bold;color:#f46764;}
+.layerInner .stit_h5{font-size:13px;color:#000;line-height:18px;}
+.layerInner .numlist{margin-left:10px;}
+.layerInner .numlist li{margin-top:10px;font-size:13px;color:#777;line-height:17px;text-indent:-10px;}
+@media screen and (max-width:320px) {
+	.layerInner dl.txt_info .gbox>ul>li{float:none;width:100%;}
+}
+
+/* contents.css */
+.popCont .lineBox2 .txt_info .gbox{margin:7px 0;padding:10px 20px;background-color:#eee;}
+.popCont .lineBox2 .txt_info .gbox .list{}
+.popCont .lineBox2 .txt_info .gbox .list:after{content:'';display:block;clear:both;}
+.popCont .lineBox2 .txt_info .gbox .list li{float:none;width:100%;font-size:13px;line-height:22px;color:#777;}
+.popCont .lineBox2 .txt_info .gbox .txtpink{margin-top:4px;font-weight:bold;color:#f46764;}
+
+.popCont .lineBox2 .oyexNotice{}
+.popCont .lineBox2 .oyexNotice h4.tit{font-size:15px;color:#666;}
+.popCont .lineBox2 .oyexNotice ul.list li{margin-top:5px;font-size:12px;line-height:15px;color:#777;}
+
+.btnArea.btm{background-color:#fff;}
+.btnArea.btm .btnSet{padding:0 10px 30px;}
+.btnArea.btm .btnSet .btn{display:inline-block;width:50%;}
+.btnArea.btm .btnSet .btn button{width:100%;}
+.btnArea.btm .btnSet.one{text-align:center;}
+.btnArea.btm .btnSet.one.pd1{padding:20px 25px 30px;}
+.btnArea.btm .btnSet.two.pd1{padding:20px 25px 30px;}
+.btnArea.btm .btnSet.two .btnDel{float:left;width:60px;height:50px;padding:0;border:1px solid #999;border-radius:0;}
+.btnArea.btm .btnSet.two .btnDel+.btnR{float:none;width:auto;margin-left:65px;padding-left:0;}
+.btnArea.btm .btnSet.two .btnGreen.types{margin:0;height:50px;border-radius:0;font-family:'Montserrat', -apple-system, 'Noto Sans KR';}
+.btnArea.btm .btnSet.two .btnL{float:left;width:50%;padding-right:5px;}
+.btnArea.btm .btnSet.two .btnR{float:right;width:50%;padding-left:5px;}
+
+.pageFullWrap .popContainer .popCont.oyexlay{padding-bottom:82px}
+.btnArea.btm.oyexFix{position:fixed;bottom:0;left:0;width:100%;border-top:1px solid #ddd;}
+.btnArea.btm.oyexFix .btnSet.two{padding:15px 25px;}
+
+
+/* 온라인몰 큐레이션 개선 관련 contents.css*/
+.brand_like{background-color:#fff;border-bottom:1px solid #e5e5e5;}
+.brand_like a{display:block;padding:14px 0 15px;text-align:center;}
+.brand_like .brand{display:inline-block;font-size:13px;font-weight:600;color:#777;}
+.brand_like .brand.arr{padding-right:9px;background:url('/mc-static-root/image/comm/ico_arr_6_14.png') no-repeat 100% 50%;background-size:3px 7px;}
+.brand_like .brand .icon{display:inline-block;padding-left:23px;font-weight:700;background:url('/mc-static-root/image/product/icon_like_off.png') no-repeat 0 50%;background-size:20px 18px;}
+.brand_like .on .brand .icon{display:inline-block;padding-left:23px;font-weight:700;background:url('/mc-static-root/image/product/icon_like.png') no-repeat 0 50%;background-size:20px 18px;}
+.brand_like.searchpage{margin-bottom:10px;border-bottom:0;}
+
+.ttab_menu{background-color:#fff;}
+.ttab_menu li{float:left;width:50%;}
+.ttab_menu li>a{display:block;height:57px;line-height:55px;font-size:16px;color:#666;text-align:center;border-bottom:2px solid #e5e5e5;}
+.ttab_menu li>a.on{font-weight:700;color:#9bce26;border-bottom:2px solid #9bce26;}
+
+.brand_like_list{padding:33px 15px 0;border-top:1px solid #e5e5e5;background-color:#fff;}
+.brand_like_list li{margin-top:40px;}
+.brand_like_list li:first-child{margin-top:0;}
+.brand_like_list .option{position:relative;}
+.brand_like_list .option .btnlike{display:inline-block;margin:0;width:20px;height:18px;font-size:0;color:transparent;background:url('/mc-static-root/image/product/icon_like.png') no-repeat 0 50%;background-size:20px 18px;}
+.brand_like_list .option .link{display:inline-block;padding-right:9px;font-size:15px;font-weight:700;color:#333;line-height:18px;background:url('/mc-static-root/image/comm/ico_arr_6_14.png') no-repeat 100% 50%;background-size:3px 7px;}
+.brand_like_list .option .txt{position:absolute;top:0px;right:0px;font-size:12px;color:#777;font-weight:600;}
+.brand_like_list .ban_brand{margin-top:5px;}
+@media screen and (max-width:320px) {
+	.brand_like_list .option .txt{position:static;margin-top:5px;}
+}
+
+/* common.css */
+.btnTxtgray {background-color:#fff;font-weight:400;font-size:12px;line-height:20px;color:#666;}
+.totalBox {position:relative;overflow:hidden;background-color:#fff;border-top:0;padding:12px 15px 13px;}
+.totalBox .cnt {font-size:12px;line-height:20px;color:#000;}
+.totalBox .cnt strong {display:inline-block;font-size:12px;color:#9bce26;vertical-align:top;}
+
+/* #프로필 영역 GUI 개편 contents.css */
+/* 탑리뷰어 */
+/* 삭제 S */
+.icon_topRate{display:inline-block;padding:0 10px;height:20px;line-height:20px;font-size:12px;color:#fff;background-color:#0cc7b8;border-radius:10px;}
+.my_profile_area{position:relative;min-height:120px;padding:20px;background-color:#fff;}
+.my_profile_area *{font-family:'Montserrat', -apple-system, 'Noto Sans KR';}
+.my_profile_area .thum{float:left;position:relative;width:60px;height:60px;margin:0 0 0 25px;overflow:hidden;}
+.my_profile_area .thum .bg{position:absolute;top:0px;left:0px;display:block;overflow:hidden;width:60px;height:60px;background:url('/mc-static-root/image/mypage/bg_my_picture_profile.png') no-repeat 0 0;background-size:60px;}
+.my_profile_area .thum img{width:60px;height:60px;}
+.my_profile_area .edtphoto{position:absolute;top:66px;left:25px;width:60px;height:20px;background-color:rgba(255,255,255,0.8);border-radius:10px;text-align:center;background-image:url('/mc-static-root/image/comm/bar2x23.png');background-repeat:no-repeat;background-position:50%;background-size:1px auto;}
+.my_profile_area .edtphoto button{float:left;width:20px;height:20px;margin:0 5px;background:none;font-size:0;color:transparent;}
+.my_profile_area .edtphoto button.btn01{background:url('/mc-static-root/image/comm/btn_photo_del.png') no-repeat 50%;background-size:13px;}
+.my_profile_area .edtphoto button.btn02{background:url('/mc-static-root/image/comm/icon_camera.png') no-repeat 50%;background-size:13px;}
+.my_profile_area.rate_01{background-color:#b59d5a;}
+.my_profile_area.rate_02{background-color:#2e2e2e;}
+.my_profile_area.rate_03{background-color:#01a84d;}
+.my_profile_area.rate_04{background-color:#90c200;}
+.my_profile_area.rate_01 .thum .bg{background:url('/mc-static-root/image/mypage/bg_my_picture_01.png') no-repeat 0 0;background-size:60px;}
+.my_profile_area.rate_02 .thum .bg{background:url('/mc-static-root/image/mypage/bg_my_picture_02.png') no-repeat 0 0;background-size:60px;}
+.my_profile_area.rate_03 .thum .bg{background:url('/mc-static-root/image/mypage/bg_my_picture_03.png') no-repeat 0 0;background-size:60px;}
+.my_profile_area.rate_04 .thum .bg{background:url('/mc-static-root/image/mypage/bg_my_picture_04.png') no-repeat 0 0;background-size:60px;}
+
+.my_profile_area .nick_area{margin-left:100px;padding:9px 0 32px 0;}
+.my_profile_area .nick_area .uid{font-size:18px;color:#fff;font-weight:600;word-break:break-all;}
+.my_profile_area .nick_area .uid .icon_topRate{margin-left:8px;vertical-align:middle;font-weight:normal !important;}
+.my_profile_area .nick_area .nick{margin-top:2px;}
+.my_profile_area .nick_area .nick dt{position:relative;float:left;padding-right:8px;font-size:13px;font-weight:bold;color:#fff;}
+.my_profile_area .nick_area .nick dt:after{content:'';display:block;position:absolute;top:4px;right:0;width:0;height:12px;border-left:1px solid #fff;border-right:1px solid #fff;}
+.my_profile_area .nick_area .nick dd{position:relative;margin:0 35px 0 48px;border-bottom:1px solid #fff;}
+.my_profile_area .nick_area .nick dd input{height:22px;padding:0 5px 1px 0;margin-top:0px;border:0;background-color:transparent;border-radius:0;font-size:13px;line-height:21px;color:#fff;}
+.my_profile_area .nick_area .nick dd input::placeholder{font-size:13px;color:#555;font-weight:normal;}
+.my_profile_area .nick_area .nick dd button{position:absolute;top:0px;right:0px;display:block;padding:0 8px 0 0;margin-top:0;font-weight:normal;font-size:12px;line-height:21px;color:#444;border:0;background:transparent url(/mc-static-root/image/comm/ico_arrow_link2.png) no-repeat 100% 50%;background-size:3.5px 7px;}
+.my_profile_area .nick_area .txtinfo{position:absolute;top:72px;left:154px;font-size:12px;}
+.my_profile_area .nick_area .txtinfo.color01{color:#af0000;}
+.my_profile_area .nick_area .txtinfo.color02{color:#444;}
+.my_profile_area .nick_area .txtinfo.color03{color:#444;}
+.my_profile_area .nick_area .tag{margin-top:3px;font-size:12px;color:#fff;}
+.my_profile_area.h90{min-height:90px;border-bottom:1px solid #e5e5e5;}
+.my_profile_area.h90 .nick_area{padding:9px 0 23px 0;}
+
+.my_profile_area.rate_02 .nick_area .nick dd input{color:#fefefe;}
+.my_profile_area.rate_02 .nick_area .nick dd input::placeholder{color:#666;}
+.my_profile_area.rate_02 .nick_area .nick dd button{color:#999;background:transparent url(/mc-static-root/image/comm/ico_arrow_link3.png) no-repeat 100% 50%;background-size:3.5px 7px;}
+.my_profile_area.rate_02 .nick_area .txtinfo.color01{color:#e10000;}
+.my_profile_area.rate_02 .nick_area .txtinfo.color02{color:#999;}
+.my_profile_area.rate_02 .nick_area .txtinfo.color03{color:#999;}
+.my_profile_area.rate_03 .nick_area .nick dd input{color:#fefefe;}
+.my_profile_area.rate_03 .nick_area .nick dd input::placeholder{color:#555;}
+.my_profile_area.rate_03 .nick_area .nick dd button{color:#333;background:transparent url(/mc-static-root/image/comm/ico_arrow_link2.png) no-repeat 100% 50%;background-size:3.5px 7px;}
+.my_profile_area.rate_03 .nick_area .txtinfo.color01{color:#8f0000;}
+.my_profile_area.rate_03 .nick_area .txtinfo.color02{color:#333;}
+.my_profile_area.rate_03 .nick_area .txtinfo.color03{color:#333;}
+.my_profile_area.rate_04 .nick_area .nick dd input{color:#fefefe;}
+.my_profile_area.rate_04 .nick_area .nick dd input::placeholder{color:#555;}
+.my_profile_area.rate_04 .nick_area .nick dd button{color:#333;background:transparent url(/mc-static-root/image/comm/ico_arrow_link2.png) no-repeat 100% 50%;background-size:3.5px 7px;}
+.my_profile_area.rate_04 .nick_area .txtinfo.color01{color:#8f0000;}
+.my_profile_area.rate_04 .nick_area .txtinfo.color02{color:#333;}
+.my_profile_area.rate_04 .nick_area .txtinfo.color03{color:#333;}
+/* 삭제 E */
+.mrline5{display:block;height:7px;margin:0;background-color:#eee;border:1px solid #e6e6e6;border-width:1px 0;}
+.my_new_profile{position:relative;padding:20px 20px 15px;background-color:#fff;}
+.my_new_profile *{font-family:'Montserrat', -apple-system, 'Noto Sans KR', sans-serif}
+.my_new_profile:after{content:'';display:block;clear:both;}
+.my_new_profile .thum{float:left;position:relative;overflow:hidden;width:65px;height:65px;}
+.my_new_profile .thum .bg{position:absolute;top:0px;left:0px;display:block;overflow:hidden;width:65px;height:65px;background:url(/mc-static-root/image/mypage/bg_my_picture.png) no-repeat 0 0;background-size:65px;}
+.my_new_profile .thum img{width:65px;height:65px;}
+.my_new_profile .info{min-height:65px;padding:0 0 0 75px;}
+.my_new_profile .info>p.id{margin-top:1px;font-size:15px;color:#555;word-break:break-all;font-weight:600;}
+.my_new_profile .info>p.rate{padding-left:24px;font-size:14px;line-height:18px;color:#9fd112;font-weight:600;}
+.my_new_profile .info>p.tag{margin-top:0;font-size:12px;color:#555;font-weight:600;}
+.my_new_profile .icon_topRate{display:inline-block;padding:0 10px;height:20px;line-height:20px;font-size:12px;font-weight:400;color:#fff;background-color:#0cc7b8;border-radius:10px;}
+.my_new_profile .edtphoto{position:absolute;top:73px;left:24px;width:55px;height:22px;background-color:rgba(255,255,255,0.8);border:1px solid #eee;border-radius:10px;box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);text-align:center;background-image:url('/mc-static-root/image/comm/bar2x23.png');background-repeat:no-repeat;background-position:25px 5px;background-size:1px auto;}
+.my_new_profile .edtphoto button{float:left;width:20px;height:22px;margin:0 3px;background:none;font-size:0;color:transparent;}
+.my_new_profile .edtphoto button.btn01{background:url('/mc-static-root/image/comm/btn_photo_del.png') no-repeat 50%;background-size:20px;}
+.my_new_profile .edtphoto button.btn02{background:url('/mc-static-root/image/comm/icon_camera.png') no-repeat 50%;background-size:20px;}
+.my_new_profile.rate_01 .info>p.rate{color:#cbb16a;background:url(/mc-static-root/image/mypage/icon_rating_new_on.png) no-repeat 0 0;background-size:18px auto;}
+.my_new_profile.rate_02 .info>p.rate{color:#323232;background:url(/mc-static-root/image/mypage/icon_rating_new_on.png) no-repeat 0 -25px;background-size:18px auto;}
+.my_new_profile.rate_03 .info>p.rate{color:#11b761;background:url(/mc-static-root/image/mypage/icon_rating_new_on.png) no-repeat 0 -50px;background-size:18px auto;}
+.my_new_profile.rate_04 .info>p.rate{color:#9fd112;background:url(/mc-static-root/image/mypage/icon_rating_new_on.png) no-repeat 0 -75px;background-size:18px auto;}
+
+.my_new_profile .nick_area{margin-left:0px;padding:0px 0 0px 0;}
+.my_new_profile .nick_area .nick{margin:3px 35px 15px 0;height:24px;border-bottom:1px solid #ddd;}
+.my_new_profile .nick_area .nick dt{position:relative;float:left;padding:1px 8px 0 0;font-size:13px;font-weight:600;color:#555;}
+.my_new_profile .nick_area .nick dt:after{content:'';display:block;position:absolute;top:4px;right:0;width:0;height:12px;border:0;border-left:1px solid #666;}
+.my_new_profile .nick_area .nick dd{position:relative;margin:0 0 0 48px;padding-right:50px;border-bottom:1px solid #fff;vertical-align:top;}
+.my_new_profile .nick_area .nick dd input{height:22px;padding:0 5px 1px 0;margin-top:0px;vertical-align:top;border:0;background:none;border-radius:0;font-size:13px;line-height:21px;color:#555;font-weight:700}
+.my_new_profile .nick_area .nick dd input::placeholder{font-size:13px;color:#999;font-weight:400;}
+.my_new_profile .nick_area .nick dd button{position:absolute;top:1px;right:0px;display:block;padding:0 8px 0 0;margin:0;font-weight:normal;font-size:12px;line-height:21px;color:#555;border:0;background:transparent url(/mc-static-root/image/comm/ico_arrow12x18.png) no-repeat 100% 50%;background-size:6px 9px;}
+.my_new_profile .nick_area .txtinfo{position:absolute;top:90px;left:95px;font-size:11px;}
+.my_new_profile .nick_area .txtinfo.color01{color:#fe1818;}
+.my_new_profile .nick_area .txtinfo.color02{color:#fe1818;}
+.my_new_profile .nick_area .txtinfo.color03{color:#555;}
+.my_new_profile .nick_area .tag{margin-top:3px;font-size:12px;color:#fff;}
+
+.user_view_info{position:relative;padding:0 15px 20px;background-color:#fff;border-bottom:1px solid #e5e5e5;}
+.user_view_info *{font-family:'Montserrat', -apple-system, 'Noto Sans KR', sans-serif}
+.user_view_info .inner{position:relative;top:0;background-color:#fff;border-top:1px dashed #e6e6e6;}
+.user_view_info .inner .tit{position:relative;padding:15px 5px 0;font-size:15px;color:#333;font-weight:bold;}
+.user_view_info .inner .tit span{float:right;font-size:11px;color:#888;font-weight:normal;}
+.user_view_info .inner>ul.info{padding-top:15px;}
+.user_view_info .inner>ul.info>li{position:relative;float:left;width:25%;height:45px;border-left:1px solid #ddd;}
+.user_view_info .inner>ul.info>li:first-child{border-left:0;}
+.user_view_info .inner>ul.info>li .num{position:absolute;bottom:-3px;right:7px;font-size:14px;color:#333;font-weight:400;}
+.user_view_info.my_asis{padding-bottom:5px;}
+.user_view_info.my_asis .inner{border:0}
+@media screen and (max-width:359px) {
+	.user_view_info .inner>ul.info>li .num{font-size:12px;}
+	.my_new_profile .nick_area .nick{margin-right:0;}
+}
+.user_view_info .inner>ul.info>li .txt{padding-left:33px;font-size:12px;}
+.user_view_info .inner>ul.info>li.icon_01{background:url(/mc-static-root/image/comm/icon_w.png) no-repeat 10px 1px;background-size:18px;}
+.user_view_info .inner>ul.info>li.icon_02{background:url(/mc-static-root/image/comm/icon_k.png) no-repeat 10px 1px;background-size:18px;}
+.user_view_info .inner>ul.info>li.icon_03{background:url(/mc-static-root/image/comm/icon_o.png) no-repeat 10px 1px;background-size:18px;}
+.user_view_info .inner>ul.info>li.icon_04{background:url(/mc-static-root/image/comm/icon_g.png) no-repeat 10px 1px;background-size:18px;}
+.myCheckBox{margin-top:20px;padding:10px 10px 12px;border-top:1px solid #ddd;}
+.myCheckBox .tit_subject label{font-size:13px;line-height:23px;color:#000;font-weight:bold;}
+.myCheckBox .txt{font-size:12px;color:#666;line-height:17px;}
+
+/* 박민호 E */
+
+
+/** 기프트카드 **/
+.line_tab_list.col_2 > li {width:50%}
+.prd_buy_wrap.type_gift .buy_button_area.type_buy_now {padding:0}
+.prd_buy_wrap.type_gift .buy_button_area.type_buy_now .btn_buy {-webkit-box-flex:1; flex:1}
+
+#fixBtn.fix-bottom {bottom:130px !important; transform: none !important}
+
+/* 공통 */
+.gc-list-loading {position:absolute; left:0; top:0; width:100%; height:100%; background-image:url(/mc-static-root/image/giftCard/loading.gif); background-size:25px auto; background-repeat:no-repeat; background-position:center calc(100% - 50px)}
+.gc-list-loading.full {
+    background-position: center center;
+    position: fixed;
+    z-index: 10;
+    background-size: 40px;
+    pointer-events: none;
+}
+.gc-card-info-wrap {position:relative; height:115px; text-align:center}
+.gc-card-info {display:none; position:absolute; left:0; top:0; width:100%}
+.gc-card-info.is-active {display:block}
+.gc-card-info * {font-family: 'Montserrat', -apple-system, 'Noto Sans KR'}
+.gc-card-info .card-name {font-size:16px; color:#000}
+.gc-card-info .card-dic {padding:0 30px; font-size:22px;height:30px; color:#000; font-weight:bold;  text-overflow: ellipsis; white-space:nowrap; overflow: hidden;}
+.gc-card-info .card-price {margin-top:6px; font-weight:bold; font-size:30px; font-family: 'montserratLight'; color:#f27370; letter-spacing:0}
+.gc-card-info .card-price.lock {color:#555}
+.gc-card-info .card-price span {position:relative; top:-1px; margin-left:2px; font-weight:bold; font-size:22px; font-family: 'Noto Sans KR';}
+.gc-card-info .card-btn {margin-top:20px; text-align:center}
+
+.gc-card-info .card-btn button + button {margin-left:10px}
+.gc-card-info .card-btn .btn-icon + button {margin-left:8vw}
+.gc-card-info .card-buy,
+.gc-card-info .card-gift {width: 120px; height: 38px; line-height:36px; border-radius: 8px; border: solid 1px #f27370; font-size:15px}
+.gc-card-info .card-buy {color:#f27370; background-color:#fff}
+.gc-card-info .card-gift {color:#fff; background-color:#f27370}
+.gc-card-info .btn-icon {background-color:transparent; font-size:14px; color:#333}
+.gc-card-info .btn-icon span {display:inline-block; padding-top:25px; background-repeat: no-repeat; background-size:18px auto; background-position:center 0}
+.gc-card-info .card-gift span {padding-left:15px; background-image:url(/mc-static-root/image/giftCard/icon_white_gift.png); background-size:12px auto; background-repeat:no-repeat; background-position:0 2px}
+.gc-card-info .card-edit {width:22px; height:22px; margin:3px 0 0 5px; text-indent:-999em; overflow:hidden; background-color:transparent; background-image:url(/mc-static-root/image/giftCard/icon_pen.png); background-size:16px auto; background-repeat:no-repeat; background-position:center center}
+.gc-card-info .card-use-list span {background-image:url(/mc-static-root/image/giftCard/icon_paper.png);}
+.gc-card-info .card-del span {background-image:url(/mc-static-root/image/giftCard/icon_trash.png);}
+.gc-card-info .card-refund span {background-image:url(/mc-static-root/image/giftCard/icon_refund.png);}
+.gc-card-info .card-lost span {background-image:url(/mc-static-root/image/giftCard/icon_exclamation_mark.png);}
+.gc-card-info .card-lost.lock {color:#e02020}
+
+.gc-link-round {display:inline-block; height: 27px; line-height:27px; border-radius: 15.5px; background-color:#f6f6f6; padding:0 15px; color:#555; font-size:12px}
+.gc-link-round span {padding-right:12px; background-image:url(/mc-static-root/image/giftCard/icon_arrow_right.png); background-repeat:no-repeat; background-size:6px auto; background-position:right 5px}
+.gc-btn-wrap {margin-top:15px; text-align:center}
+.gc-flex-center {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.gc-link-gift {display:inline-block; padding:0 5px 5px; font-size:15px; color:#f27370; border-bottom:1px solid #f27370 !important}
+.gc-link-gift span {padding:0 14px 0 20px; background-image: url(/mc-static-root/image/giftCard/icon_pink_gift.png), url(/mc-static-root/image/giftCard/icon_arrow_right2.png); background-position:left 3px, right 8px; background-repeat:no-repeat, no-repeat; background-size:15px auto, 6px auto}
+
+.gc-line-list-wrap {position:relative}
+.gc-line-list {margin-top:10px; padding:0 20px}
+.gc-line-list .gc-list-item {border-bottom:1px solid #ebebeb}
+.gc-line-list .gc-list-item .link {display:block; padding:20px 10px 18px}
+.gc-line-list .gc-list-item .link > div {background-image:url(/mc-static-root/image/giftCard/icon_arrow_right3.png); background-repeat:no-repeat; background-size:6px auto; background-position:right 15PX}
+.gc-line-list .gc-list-item .date {font-size:12px; color:#888; font-family: 'montserratLight'; letter-spacing: 0}
+.gc-line-list .gc-list-item .msg {margin-top:7px; color:#000; font-size:14px; font-family: 'Noto Sans KR'; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 95%;}
+.gc-line-list .gc-list-item .price {color:#000; font-size:18px; font-family: 'montserratLight'; letter-spacing: 0}
+.gc-line-list .gc-list-item .price.cancel {position:relative}
+.gc-line-list .gc-list-item .price.cancel:after {content:"";position:absolute;top: calc(50% + 1px);margin-top: 0;width: calc(100% + 8px);height:1px;background-color:#000;left: -4px;}
+.gc-line-list .gc-list-item .status {position:relative; -webkit-box-flex:1;-ms-flex:1;flex:1; padding-left:20px; color:#999; font-size:12px; font-family: 'Noto Sans KR';}
+.gc-line-list .gc-list-item .status:after {content:""; position:absolute; left:8px; top:4px; width:5px; height:5px; border-left:1px solid #999; border-bottom:1px solid #999}
+.gc-line-list .gc-list-item .inner {position:relative; margin-top:7px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.gc-line-list .gc-list-item .store {-webkit-box-flex:1;-ms-flex:1;flex:1; padding-right:10px; color:#000; font-size:16px; font-family: 'Noto Sans KR'; overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+.gc-line-list .gc-list-item div.link > div {background-image:none}
+
+.gc-line-list.type2 {margin-top:0}
+.gc-line-list.type2 .gc-list-item .link > div {background-position:right center}
+.gc-line-list.type2 .gc-list-item .inner {padding-right:20px}
+.gc-line-list.type2 .gc-list-item .cancel-txt {position:absolute; top:-22px; right:20px; color:#e02020; font-size:12px}
+.gc-line-txt {padding:9px 30px; font-size:12px; color:#666; font-family: 'montserratLight'; border-bottom:1px solid #e5e5e5; word-break:keep-all}
+.gc-line-txt + .gc-search {margin-bottom:10px}
+.gc-content-refresh {display:block; text-align:center; font-size:16px; color:#888; font-weight:bold; font-family:'Noto Sans KR'; padding-top:118px; background-image:url(/mc-static-root/image/giftCard/icon_refresh2.png); background-repeat:no-repeat; background-size:56px auto; background-position:center 50px}
+
+.gc-card-detail {padding:30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center; border-bottom:1px solid #e5e5e5; background-color:#f8f8f8; font-size:14px; color:#333}
+.gc-card-detail * {font-family: 'montserratLight', 'Noto Sans KR' !important; letter-spacing: 0}
+.gc-card-detail .img img {width:131px; height:auto; max-height:85px}
+.gc-card-detail .card-name {color:#000; white-space: nowrap; text-overflow: ellipsis; overflow:hidden}
+.gc-card-detail .detail {width:calc(100% - 160px); margin-left:20px; line-height:22px}
+
+.gc-btn-block {display:block; margin-top:30px; width:100%; background:none; color:#fff; height: 45px; line-height:45px; text-align:center; border-radius: 5px; background-color: #333; font-weight:bold; font-size:16px}
+
+.btn_gift_card {position:relative;display:block;height:48px;padding:15px 20px;border-right:1px solid #e6e6e6; border-bottom:0;font-weight:400;font-size:14px;line-height:20px;color:#333;letter-spacing:-0.5px;}
+.btn_gift_card span {display:inline-block; padding-left:33px; background-image:url(/mc-static-root/image/giftCard/img_gift_card.png); background-repeat:no-repeat; background-size:22px auto; background-position:0 0}
+.btn_gift_card:after{content:'';display:block;width:7px;height:7px;border:1px solid #aeaeae;border-width:1px 1px 0 0;position:absolute;top:50%;right:17px;margin-top:-3.5px;transform:rotate(45deg);}
+
+.gc-reset {display:none; position:absolute; right:0; top:12px; width:17px; height:16px; background-image:url(/mc-static-root/image/giftCard/icon_reset.png); background-size:17px auto; background-repeat:no-repeat; background-position:0 0; text-indent: -999em; overflow:hidden; background-color:transparent}
+
+@media screen and (max-width:320px) {
+	.gc-card-detail {padding:20px; font-size:12px}
+}
+/* 안내페이지 */
+.gc-landing {padding-top:40px; background-color:#fff; background-image:url(/mc-static-root/image/giftCard/bg_intro_top.png); background-size:100% auto; background-repeat:no-repeat; background-position:0 -1px;}
+.gc-landing-swiper {width: 100%; height: 100%; padding:40px 0 0}
+.gc-landing-swiper .swiper-wrapper {position:relative; display: -webkit-box}
+.gc-landing-swiper .swiper-slide .img {position:relative; display:block; width:100%; height:47.78vw; overflow:hidden}
+.gc-landing-swiper .swiper-slide .img img {max-width: 100%;min-width:100%; min-height:100%; width: auto;height: auto;}
+.gc-landing-swiper .swiper-slide:not(.swiper-slide-next) .img img {transition:transform .3s;}
+.gc-landing-swiper .swiper-slide:not(.swiper-slide-active) .img img {transform:scale(0.92)}
+.gc-landing-swiper .gc-swiper-pagination {margin-top:20px}
+.gc-head-tit,
+.gc-head-txt {text-align:center; padding:0 20px; word-break: keep-all}
+.gc-head-tit {position:relative; font-size:19px; color:#333; font-weight:bold}
+.gc-head-tit span {display:inline-block; position:relative; z-index:1}
+.gc-head-tit em:after {content:""; position:absolute; left:1px; bottom:2px; width:calc(100% + 1px); height:10px; z-index:-1; background-color: rgba(209, 223, 255, 0.85);}
+.gc-head-tit em {position:relative; font-size:22px; font-style: normal;}
+.gc-head-txt {font-size:15px; margin-top:15px; color:#555; font-family: 'Montserrat', -apple-system, 'Noto Sans KR';}
+
+@media screen and (min-width:361px) {
+	.gc-head-tit em:nth-child(1):after { width:calc(100% + 10px);}
+}
+
+@media screen and (max-width:360px) {
+	.gc-head-tit {width:240px; margin:0 auto;}
+	.gc-head-tit em {display:inline-block;}
+}
+
+
+
+.gc-swiper-pagination {text-align:center}
+.gc-swiper-pagination .swiper-pagination-bullet {display:inline-block;width: 4px;height: 4px;border-radius: 2px;margin:0 2px;background-color: #d8d8d8;vertical-align: top;}
+.gc-swiper-pagination .swiper-pagination-bullet-active {width: 13px; background-color: #666;}
+
+.gc-landing-notice {margin-top:45px; padding:18px 15px; border-top:1px solid #e6e6e6}
+.gc-landing-notice * {font-family: 'Montserrat', -apple-system, 'Noto Sans KR'}
+.gc-landing-notice ul {margin-top:10px}
+.gc-landing-notice ul li {position:relative; font-size:12px; color:#666; padding-left:8px; margin-top:10px; line-height:20px}
+.gc-landing-notice ul li:first-child {margin-top:0}
+.gc-landing-notice ul li:after {content:""; position:absolute; left:0; top:9px; width:2px; height:2px; background-color:#999}
+.gc-landing-notice .link-underline {font-weight:bold; border-bottom:1px solid #666}
+.gc-landing-notice-tit {font-size:12px; font-weight:bold; color:#333}
+
+.gc-detail-notice-inner {background-color:#fff}
+.gc-detail-notice {padding:20px 25px 25px; background-color:#f5f5f5}
+.gc-detail-notice-tit {margin-bottom:8px; font-size:13px; font-weight:bold; padding-left:16px; background-image:url(/mc-static-root/image/giftCard/icon_detail_notice.png); background-size:13px auto; background-repeat:no-repeat; background-position:0 4px;  font-family: 'Montserrat', -apple-system, 'Noto Sans KR'}
+.gc-detail-notice-editor {line-height:20px; word-spacing:0; letter-spacing:0; font-family: 'Montserrat', -apple-system, 'Noto Sans KR'; word-break:keep-all}
+.gc-detail-notice-editor ul li {position:relative; font-size:13px; color:#666; padding-left:8px; margin-top:8px; line-height:19px}
+.gc-detail-notice-editor ul li:first-child {margin-top:0}
+.gc-detail-notice-editor ul li:after {content:""; position:absolute; left:0; top:9px; width:2px; height:2px; background-color:#999}
+
+
+@media screen and (max-width:320px) {
+	.gc-landing-head-tit {padding:0 10px; font-size:20px}
+	.gc-head-tit {font-size:19px}
+}
+
+/* 검색결과 */
+.search_results.type_gift_card {width:100% !important}
+.search_results.type_gift_card .result_text {position:relative; padding-right:11px}
+.search_results.type_gift_card .result_text:after {content:""; position:absolute; right:4px; top:3px; width:1px; height:11px; background-color:#ccc}
+.mlist1v-goods.type_gift_card li .imgSmall .img {line-height:200px}
+.mlist1v-goods.type_gift_card li .imgSmall .img img {vertical-align: middle; margin-top:-5px}
+.mlist1v-goods.type_gift_card li .text {text-overflow: ellipsis;white-space: nowrap; overflow: hidden;}
+
+/* 제품상세 */
+.prdDetailArea.type_gift_card {padding-bottom:25px}
+/*.prdDetailArea.type_gift_card .swiper-slide {margin-top:0; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.prdDetailArea.type_gift_card .sliderPrdwrap {padding-bottom:0}*/
+.prd_detail_info.type_gift_card {border-top:1px solid #e5e5e5}
+.prd_detail_info.type_gift_card .tx_info {letter-spacing: -1px}
+.prd_detail_info.type_gift_card .tx_tit {vertical-align: middle}
+.prd_detail_info.type_gift_card > li:first-child {padding-bottom:8px}
+
+/* 기프트카드 관리 */
+.gc-my-wrap {padding-bottom:20px; background-color:#fff}
+.gc-my-wrap * {font-family: "Noto Sans KR"}
+.gc-my-wrap .sch_no_data {position:relative; background-size:62px auto; font-size:16px}
+.gc-my-wrap .sch_no_data > p {padding-top:180px; padding-bottom:117px; font-weight:bold; line-height:23px; border:0}
+.gc-my-wrap .sch_no_data .gc-btn-wrap {position:absolute; left:0; top:215px; width:100%}
+.gc-my-wrap .mlist-payment {border-bottom:0}
+.gc-my-wrap .mlist-payment + .lineTc {margin-top:0}
+.gc-my-wrap .mlist-payment + .lineTc:before {content:"";height:10px;width: calc(100% + 30px);background-color:#eee;display: block;left: -15px;position: relative;top: -11px;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;}
+.gc-my-wrap .mlist-payment li.total {border-top:0}
+.gc-my-order .tx_order_no {font-family: 'montserratregular'}
+.gc-my-order .tx_order_no > span {margin-left:7px; background-position:0 4px}
+.gc-my-order .btn_order_cancel {width: 63px;height: 28px;border-radius: 5px;border: solid 1px #777; color:#777; font-size:12px; margin-top:-15px; background:none; font-family: "Noto Sans KR"}
+.gc-my-order .prd_tit * {font-family: 'Montserrat', -apple-system, 'Noto Sans KR'}
+.gc-my-order .prd_tit .name {margin-top:4px; margin-bottom:2px; font-weight:bold; white-space: nowrap;text-overflow: ellipsis; display: block;}
+.gc-my-order .order_prd_info {padding-left:98px}
+.gc-my-order .order_prd_info .prd_img {left:10px}
+.gc-my-order .order_prd_info .prd_tit {width:calc(100% - 80px)}
+.gc-my-order .order_info_area {border-top:0}
+.gc-my-order .gc-btn-receipt {position:absolute; right:0; top:20px; padding-left:16px; background-color:transparent; font-size:12px; color:#666; font-weight:bold; background-image:url(/mc-static-root/image/giftCard/icon_receipt.png); background-size:12px auto; background-repeat:no-repeat; background-position:0 2px}
+.gc-my-order .cancel-txt {position:absolute; right:17px; top:17px; font-size:12px; color:#e02020}
+
+.gc-my-wrap .gc-card-info-wrap {height:145px}
+.gc-my-wrap .gc-card-info .card-btn {margin-top:30px}
+.gc-my-wrap .gc-card-info .card-name {padding:0 20px; font-size:20px; color:#000; font-family: 'montserratLight'}
+.gc-my-wrap .gc-card-info .card-name .txt {padding:0 25px; display:block; text-overflow: ellipsis; white-space:nowrap; overflow: hidden;}
+.gc-tab:after {content:""; display:block; clear:both}
+.gc-tab a,
+.gc-tab span {float:left; width:50%; text-align: center; border-bottom:2px solid #e5e5e5; padding:15px 0; color:#666; font-size:16px; font-weight:bold}
+.gc-tab .is-active {color:#9bce26; border-color:#9bce26}
+.gc-my-util {margin-top:33px; text-align:center}
+.gc-my-util button {background:none; font-size:15px; color:#333}
+.gc-my-util button span {padding-left:18px}
+.gc-my-util .btn + .btn {position:relative; padding-left:40px}
+.gc-my-util .btn + .btn:after {content:""; position:absolute; left:20px; top:6px; width:1px; height:13px; background-color:#555}
+.gc-my-util .card-add {background-image:url(/mc-static-root/image/giftCard/icon_plus.png); background-size:10px auto; background-repeat:no-repeat; background-position:0 6px}
+.gc-my-util .card-buy {background-image:url(/mc-static-root/image/giftCard/icon_basket.png); background-size:13px auto; background-repeat:no-repeat; background-position:0 4px}
+.gc-mycard-swiper {width: 100%; height: 100%; padding:30px 0 0}
+.gc-mycard-swiper .swiper-wrapper {position:relative; display: -webkit-box}
+.gc-mycard-swiper .swiper-slide {position:relative}
+.gc-mycard-swiper .front .img {position:relative; display:block; width:100%; height:47.78vw; overflow:hidden}
+.gc-mycard-swiper .front .img img {max-width: 100%;min-width:100%; min-height:100%; width: auto;height:47.78vw;}
+.gc-mycard-swiper .front .btn-main-card {position:absolute; left:2vw; top:2vw; z-index:1; background:none}
+.gc-mycard-swiper .front .icon-star {display:block; width:32px; height:32px; background-color:#f5f5f5; background-image:url(/mc-static-root/image/giftCard/icon_star_off.png); background-size:15px auto; background-repeat:no-repeat; background-position:center 8px; text-indent:-999em; overflow:hidden; border-radius: 32px}
+.gc-mycard-swiper .front .btn-main-card.is-active .icon-star {background-image:url(/mc-static-root/image/giftCard/icon_star_on.png)}
+.gc-mycard-swiper .front .touch-alert {position:absolute; left:0; bottom:15px; width:100%; text-align:center; z-index:1; pointer-events:none}
+.gc-mycard-swiper .front .touch-alert span { display:inline-block; height: 30px; border-radius: 15px; color:#fff; font-size:12px; padding-left:38px; padding-right:15px; line-height:30px; background-image:url(/mc-static-root/image/giftCard/icon_barcode.png); background-color:rgba(0, 0, 0, 0.5); background-size:18px auto; background-repeat:no-repeat; background-position:15px 9px; letter-spacing: 0;}
+.gc-mycard-swiper .gc-swiper-pagination {height:4px; margin:15px 0 13px;}
+.gc-mycard-swiper .front {position:relative; z-index:1}
+.gc-mycard-swiper .back {display:none; position:absolute; left:0; top:0; width:100%; height:100%; border-radius: 6px; border: solid 1px #ccc; z-index:2; padding:0 10px; text-align:center; background-color:#f8f8f8;}
+.gc-mycard-swiper .back .inner {width: 100%;height:100%;display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}
+.gc-mycard-swiper .back-close {position:absolute; right:2.4vw; top:2.4vw; width:22px; height:22px; background-image:url(/mc-static-root/image/giftCard/icon_close.png); background-size:12px auto; background-repeat:no-repeat; background-position:center center; text-indent:-999em; overflow:hidden; background-color:transparent}
+.gc-mycard-swiper .back .time {display:block; color:#ff0200; font-size:16px; letter-spacing: 0}
+.gc-mycard-swiper .back .img {margin-top:15px; text-align:center; padding:0 9vw}
+.gc-mycard-swiper .back .img img {max-width:100%}
+.gc-mycard-swiper .back .number {margin-top:5px; font-size:13px; color:#333}
+.gc-mycard-swiper .back .number span {letter-spacing:0; font-family: 'montserratLight'}
+.gc-mycard-swiper .back .number span + span {padding-left:8px}
+.gc-mycard-swiper .back .gc-btn-refresh {margin-top:20px; background-color:transparent}
+.gc-mycard-swiper .back .gc-btn-refresh span {display:inline-block; padding-top:43px; background-image:url(/mc-static-root/image/giftCard/icon_refresh.png); background-size:43px auto; background-repeat:no-repeat; background-position:center 0; color:#333; font-size:13px}
+.gc-mycard-swiper .lock-block {position:absolute; left:0; top:0; width:100%; height:100%; border-radius: 10px; border: solid 1px #ccc; z-index:2; text-align:center; color:#fff; font-size:18px; background-color:rgba(0, 0, 0, 0.7);}
+.gc-mycard-swiper .lock-block span {display:inline-block; padding-top:75px; background-image:url(/mc-static-root/image/giftCard/icon_lock.png); background-size:45px auto; background-repeat:no-repeat; background-position:center 0;}
+.gc-mycard-swiper .lock-block .not-available {padding-top:60px; background-image:url(/mc-static-root/image/giftCard/icon_card.png); background-repeat:no-repeat; background-position:center 0; background-size:55px auto}
+
+.gc-mycard-swiper .card-inner {position:relative}
+.gc-mycard-swiper .card-inner.lock .icon-star,
+.gc-mycard-swiper .card-inner.lock .touch-alert {display:none}
+
+
+@media screen and (max-width:320px) {
+	.gc-my-order .tx_order_no > span {display:block; margin-left:0; background-position:0 6px}
+	.gc-my-order .order_prd_info {padding-left:78px}
+	.gc-my-order .order_prd_info .prd_img {left:0}
+}
+
+.gc-card-add {padding:30px 15px}
+.gc-card-add .gc-tit {margin-bottom:10px; font-size:16px; font-weight:bold; color:#333; letter-spacing: 0}
+.gc-card-add .gc-link-icon {display:inline-block; position:relative; top:1px; width:14px; height:14px; background-image:url(/mc-static-root/image/giftCard/icon_notice.png); background-size:14px auto; background-repeat:no-repeat; background-position:center 0; text-indent: -999em; overflow:hidden}
+.gc-card-add .gc-input-wrap {position:relative}
+.gc-card-add .input {padding:11px 0; border:0 !important; border-bottom:1px solid #999 !important; border-radius: 0; font-family: 'montserratregular'; font-size:16px; letter-spacing:0}
+.gc-card-add .input::placeholder {font-family: 'Noto Sans KR'}
+.gc-card-add .gc-input-wrap + .gc-input-wrap {margin-top:10px}
+.gc-card-add .gc-notice {margin-top:30px; font-family: 'Noto Sans KR';}
+.gc-card-add .gc-notice ul li {position:relative; font-size:12px; color:#666; padding-left:8px; line-height:20px}
+.gc-card-add .gc-notice ul li:first-child {margin-top:0}
+.gc-card-add .gc-notice ul li:after {content:""; position:absolute; left:0; top:9px; width:2px; height:2px; background-color:#999}
+.gc-card-add .gc-notice .link-underline {font-weight:bold; border-bottom:1px solid #666}
+
+.gc-card-add-info {padding:30px 20px 20px; text-align:center; background-color:#fff}
+.gc-card-add-info .tit {margin-bottom:5px; font-size:16px; color:#333; font-family: 'Noto Sans KR'; font-weight:bold}
+.gc-card-add-info .txt {margin-bottom:20px; font-size:16px; color:#999; font-family: 'Montserrat', -apple-system, 'Noto Sans KR'}
+.gc-card-add-info .img img {max-width:242px}
+.gc-card-add-info .row + .row {margin-top:30px}
+
+.gc-card-add-finish {padding:40px 15px; background-color:#fff}
+.gc-card-add-finish .img {width:260px; margin:30px auto 0;}
+.gc-card-add-finish .info {width:260px; margin:22px auto 0; font-family: 'Noto Sans KR'; font-weight:bold; color:#000}
+.gc-card-add-finish .info * {font-family: 'Noto Sans KR';}
+.gc-card-add-finish .info .row {display:block;}
+.gc-card-add-finish .info .row:after {content:""; display:block; clear:both}
+.gc-card-add-finish .info .row span {float:left; }
+.gc-card-add-finish .info .row span em {font-weight:normal}
+.gc-card-add-finish .info .row span:first-child {width:80px}
+.gc-card-add-finish .info .row span + span {position:relative; top:2px; padding-right:2px; float:right; width:180px; text-align: right; font-family: 'montserratregular'; white-space:nowrap; text-overflow: ellipsis; overflow:hidden}
+.gc-card-add-finish .info .row + .row {margin-top:8px}
+.gc-card-add-finish .gc-btn-block {margin-top:50px}
+
+/* 레이어팝업 */
+.gc-layer-close {position:absolute; right:25px; top:15px; width:22px; height:22px; background-image:url(/mc-static-root/image/giftCard/icon_layer_close.png); background-size:17px auto; background-repeat:no-repeat; background-position:center center; text-indent:-999em; overflow:hidden; background-color:transparent}
+.gc-layer-card-eidt {display:none; position:fixed; bottom:0; left:0; width:100%; height:100%; z-index:100}
+.gc-layer-card-eidt .gc-layer-inner {position:absolute; left:0; bottom:0; width:100%; background:#fff}
+.gc-layer-card-eidt .gc-layer-head {padding:15px 30px; font-weight:bold; font-size:16px; border-bottom:1px solid #e6e6e6; font-family: 'Noto Sans KR'; color:#000}
+.gc-layer-card-eidt .gc-layer-body {padding:18px 30px 25px}
+.gc-layer-card-eidt .gc-layer-body .count {margin-top:6px; font-size:12px; color:#999}
+.gc-layer-card-eidt .gc-layer-body .count * {font-family: 'montserratLight'; letter-spacing:0; word-spacing:0}
+.gc-layer-card-eidt .gc-layer-body .current.error {color:#e02020}
+.gc-layer-card-eidt .text-form {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gc-layer-card-eidt .text-form .input {-webkit-box-flex:1;-ms-flex:1;flex:1;}
+.gc-layer-card-eidt .text-form .input input {letter-spacing:0; border:0; padding:0; font-size:17px; color:#333}
+.gc-layer-card-eidt .text-form button {width: 54px;height: 29px;border-radius: 14.5px; background-color: #9bce26; text-align:center; color:#fff}
+.gc-layer-card-eidt .gc-mask {position:absolute; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.7);}
+
+#gcReceiptPopup {overflow-y:auto; -webkit-overflow-scrolling:touch}
+#gcReceiptPopup .popCont .pop-iframe-inner {height:75vh; overflow-y:auto; -webkit-overflow-scrolling:touch}
+#gcReceiptPopup iframe {width: 100%; height:100%; display: block; border:0;}
+#gcReceiptPopup.is-new{display:block !important; opacity: 0; z-index:-1; left:-1000px; top:-5000px;}
+
+/*#gcReceiptPopup.is-auto {overflow:hidden; -webkit-overflow-scrolling:auto !Important}
+#gcReceiptPopup.is-auto .popCont .pop-iframe-inner {height:75vh; overflow:hidden; -webkit-overflow-scrolling:auto !Important}
+#gcReceiptPopup.is-auto iframe {height:100%; overflow:hidden;}
+#gcReceiptPopup.is-auto .popLayerArea .popContainer .popCont {overflow:hidden}*/
+
+#gcReceiptPopup .popLayerArea .popHeader {position:absolute; right:10px; background-color:transparent; border-bottom:0}
+#gcReceiptPopup .popLayerArea .popContainer {padding:0; }
+#gcReceiptPopup .popLayerArea .popHeader .btnClose {right:30px; padding:10px; background-color:#fff}
+#gcReceiptPopup .btn-wrap {padding:15px 0; text-align:center}
+#gcReceiptPopup .btn-wrap button {margin-top:0; width:65px !important; padding:0; height:30px; line-height:30px; font-size:14px}
+
+.gc-layer-full {width:100%;position: fixed;left: 0;top: 0; width:100%; height: 100%;background: #fff; z-index:100}
+.gc-layer-full .gc-layer-full-head {position:relative;width:100%;padding:0 15px;height:50px;background-color:#fff;border-bottom:1px solid #e6e6e6;z-index:1;}
+.gc-layer-full .gc-layer-full-head .title {padding:10px 0;font-size:17px;line-height:30px;color:#000;text-align:left; font-family: 'Noto Sans KR'}
+.gc-layer-full .gc-layer-full-head .btn-close {position:absolute;top:13px;right:17px;width:24px;height:24px;display:block;background:url(/mc-static-root/image/comm/btn_pop_close.png) no-repeat center 50%;background-size:18px auto;text-indent:-9999px;}
+.gc-layer-full .gc-layer-full-container {background-color:#fff; height:calc(100% - 50px); overflow-y:auto}
+.gc-layer-full .gc-layer-full-container .gc-layer-full-content {height:100%;}
+.gc-layer-full .inner-title {padding:35px 0 0;color:#333;font-size:15px;line-height:24px;}
+.gc-layer-full .inner {width:100%;padding:20px 15px 30px}
+.gc-layer-full .inner * {font-family: 'Noto Sans KR'}
+.gc-layer-full .inner .inner-title:first-child {padding-top:0}
+.gc-layer-full .inner p {padding:10px 0 0;color:#666;font-size:14px;line-height:24px;}
+
+/* 선물내역 */
+.gc-search {padding:30px 20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gc-search input {-webkit-box-flex:1; flex:1; height:35px; font-family: 'montserratLight'; letter-spacing: 0}
+.gc-search span {width:20px; color:#999; font-size:12px; padding:0 5px; text-align:center}
+.gc-search button {width: 40px; height: 35px; border-radius: 5px; margin-left:10px; background-color: #9bce26; color:#fff; font-size:12px}
+
+/* 주문 */
+.gc-price-write {padding-bottom:17px;}
+.gc-price-write .input-price {padding-bottom:10px; margin-bottom:14px; border-bottom: solid 2px rgba(232, 232, 232, 0.8);display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.gc-price-write .gc-reset {top:10px}
+.gc-price-write .input-price .label {font-size:15px; font-weight:bold; color:#333; padding-left:2px}
+.gc-price-write .input-price .input {position:relative; padding-right:27px; -webkit-box-flex:1;-ms-flex:1;flex:1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gc-price-write .input-price .input * {font-family: 'montserratregular'}
+.gc-price-write .input-price .input input {padding-right:0; border:0 !important; text-align: right; font-size:20px; color:#ccc; letter-spacing:0 !important}
+.gc-price-write .input-price .input input::placeholder {color:#ccc}
+.gc-price-write .input-price .input.is-active input,
+.gc-price-write .input-price .input.is-active input::placeholder,
+.gc-price-write .input-price .input.is-active .won {color:#ff282c !important;}
+.gc-price-write .input-price .won {margin-left:2px; position:relative; top:2px; font-size:12px; color:#ccc}
+.gc-price-write .btn-add-wrap {margin-bottom:10px; padding:0 2px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.gc-price-write .btn-add-wrap button {width:100%; height: 28px; border-radius: 5px; border: solid 1px #777; color:#777; font-size:12px; text-align: center; background: none; font-family: 'Montserrat', -apple-system, 'Noto Sans KR'; letter-spacing: 0}
+.gc-price-write .btn-add-wrap button + button {margin-left:8px; }
+.mlist-order .list li .gc-price-write p.txt {padding:2px; padding-bottom:0; font-family: 'Montserrat', -apple-system, 'Noto Sans KR'; color:#666; letter-spacing: 0}
+.mlist-order .list li .gc-price-write p.txt:before {content:'·'; margin-right:3px}
+.mlist-order.type_gift_card .order_prd_info {min-height:90px}
+.mlist-order.type_gift_card .order_prd_info .prd_tit .name {font-family: 'montserratregular'; margin-top:3px}
+.mlist-order.type_gift_card .area-mWay {padding-bottom:20px}
+.mlist-order.type_gift_card .area-mWay .Tabs.Tabsplus {display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.mlist-order.type_gift_card .area-mWay .Tabs.Tabsplus li {-webkit-box-flex:1; flex:1}
+.mlist-order.type_gift_card .list > li .area-tit.type2 .tit {overflow:visible}
+.mlist-order.type_gift_card .list > li .area-tit.type2 .tit span {position:relative; top:2px; margin-left:3px; font-size:12px; color:#666; vertical-align: top; font-family: 'Montserrat', -apple-system, 'Noto Sans KR'; }
+.mlist-order.type_gift_card .list > li.type-none-click .area-tit {padding-right:15px}
+.mlist-order.type_gift_card .list > li.type-none-click + li {margin-top:0}
+.mlist-order.type_gift_card .list > li.type-none-click + li:before {display:none}
+
+.gc-clear-1 {border-top:0 !important;}
+
+@media screen and (max-width:320px) {
+	.mlist-order.type_gift_card .list > li .area-tit.type2 .tit {padding:15px 0}
+	.mlist-order.type_gift_card .list > li .area-tit.type2 .tit span {position:absolute; left:12px; top:38px}
+	.mlist-order.type_gift_card .list > li .area-tit.type2 .icon {height:72px}
+	.mlist-order.type_gift_card .list > li .area-tit.type2 .btn_phone_list {margin:21px 0}
+}
+
+.gc-input-list-wrap {padding:20px 0 20px 15px}
+.gc-input-item {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gc-input-item + .gc-input-item {margin-top:15px}
+.gc-input-item input {height:35px; color:#333}
+.gc-input-item .name {width:85px; margin-right:10px; text-overflow: ellipsis}
+.gc-input-item .phone-number {font-family: 'montserratregular'; letter-spacing: 0}
+.gc-input-item button {position:relative; width:40px; height:35px; -webkit-box-flex:none; flex:none; background-color: transparent; text-indent: -999em;}
+.gc-input-item button:after {position:absolute; left:10px; top:10px; content:''; display:block; width:16px; height:16px;  background-image:url(/mc-static-root/image/giftCard/icon_plus_minus.png); background-size:16px auto; background-repeat:no-repeat; background-position:0 0;}
+.gc-input-item button.item-del:after {background-position:0 -16px}
+
+.gc-send-list {padding-bottom:10px; background:#fff}
+.gc-send-list .tit {margin-bottom:10px; padding:16px 14px 17px; font-family: 'Noto Sans KR'; font-weight:bold; font-size:16px; color:#000; border-bottom:1px solid #e6e6e6}
+.gc-send-list .row {padding:8px 14px; display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center; color:#333; font-size:16px}
+.gc-send-list .row .num {width:32px; font-family: 'montserratregular'; letter-spacing: 0; font-size:16px}
+.gc-send-list .row .name {width:90px; font-family: 'Noto Sans KR'; font-size:14px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.gc-send-list .row .phone {font-family: 'montserratregular'; font-size:14px; letter-spacing: 0}
+
+.gc-gift-list {padding-bottom:10px; background:#fff}
+.gc-gift-list .tit {margin-bottom:10px; padding:16px 14px 17px; font-family: 'Noto Sans KR'; font-weight:bold; font-size:16px; color:#000; border-bottom:1px solid #e6e6e6}
+.gc-gift-list .row {padding:10px 14px; color:#333; font-size:14px}
+.gc-gift-list .name {width:70px; margin-right:10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.gc-gift-list .status {text-align:right; font-size:12px; color:#333}
+.gc-gift-list .status b {font-weight:bold}
+.gc-gift-list .status strong {font-weight:bold; color:#e02020}
+.gc-gift-list .status em {color:#999; font-style:normal}
+.gc-gift-list .status span {color:#ccc}
+.gc-gift-list .phone {font-family: 'montserratregular'; letter-spacing: 0; -webkit-flex:1; flex:1}
+
+.gc-gift-list .inner {display: flex; -webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gc-gift-list .btn {margin-top:13px; text-align: right}
+.gc-gift-list .btn button {width: 63px;height: 28px;border-radius: 5px;border: solid 1px #777; color:#777; font-size:12px; background:none; font-family: "Noto Sans KR"}
+.gc-gift-list .btn button + button {margin-left:2px}
+
+#mWrapper.type_gift_card {background:#fff;}
+#mWrapper.type_gift_card #mHeader {border-bottom:0}
+
+.gc-image-wrap {background:#fff; text-align:center}
+.gc-image-wrap .img img {width:117px; height:auto}
+.gc-image-wrap .inner {padding-top:30%;}
+.gc-image-wrap .txt1 {margin-top:35px; font-size:19px; font-weight:bold; color:#333; font-family: 'Noto Sans KR'}
+.gc-image-wrap .txt2 {margin-top:20px; font-size:14px; color:#666; font-family: 'Noto Sans KR'}
+.gc-image-wrap .btn-group-order {margin-top:60px}
+
+.gc-mtg {font-family: 'montserratregular'}
+.gc-noto {font-family: 'Noto Sans KR'; font-style: normal; }
+
+/* footer 이용약관 */
+.popTermsUse p.txt1 + p:not(.txt1) {margin-top:20px}
+.popTermsUse p.txt1 {padding-top:0; line-height:24px; word-break:keep-all}
+
+/* 기프트관 변경 board.css 추가 예정 */
+.link_gift_product {display:block; text-align:center; margin:12px auto 30px; width: calc(100% - 30px); height: 49px; line-height:49px; border-radius: 5px; background-color: #f8f8f8; font-size:13px; color:#333;}
+.link_gift_product span {display:inline-block; padding-right:12px; background-image:url(/mc-static-root/image/comm/icon_black_arrow_r.png); background-repeat: no-repeat; background-position:right 20px; background-size: 5px auto}
+
+@media screen and (max-width:320px) {
+	.layerBtm .popContainer {max-height: 508px;overflow-y: auto;}
+	.layerBtm .popLayerArea .popInner {border-radius:0}
+	.link_gift_product {width:calc(100% - 15px);}
+}
+
+
+/********** S : 컬러칩 (문혜주) **********/
+.colorchip_wrap{padding:20px;text-align:center}
+.colorchip_wrap .btn_color{padding:10px 20px}
+
+/* 컬러칩 팝업 */
+.pageFullWrap.btnColorchip{height:100%}
+.pageFullWrap.btnColorchip .popContainer {padding-bottom:99px;height:calc(100% - 50px);background-color:#fff}
+.slide_fixed{position:fixed;bottom:0;left:0;padding:15px 0 ;width:100%;z-index:10;background-color:#fff;border-top:1px solid #ddd}
+
+
+/* 컬러칩 그리드  */
+.color-chip-grid{overflow:hidden;position:relative;padding-top:66px;height:100%;overflow-y:auto}
+.color-chip-grid .guide-area{position:absolute;top:0;left:0;padding:15px 3.99vw;width:100%}
+.color-chip-grid .guide-area li{padding-left:8px;font-size: 12px;font-size:12px;line-height:18px;color: #666;text-indent:-8px}
+.color-chip-grid .guide-area li:before{content:'·';display:inline-block;width:8px;text-indent:0}
+
+.color-chip-grid .grid-area{position:relative;margin:0 2.13vw;height:100% !important;text-align:center}
+.color-chip-grid .grid-area .no_result{display:inline-block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.color-chip-grid .grid-area .no_result img{width:84px;height:auto}
+.color-chip-grid .grid-area .no_result .txt{margin-top:15px}
+.color-chip-grid .grid-area.muuri{height:inherit}
+.color-chip-grid .grid-area.muuri .no_result{display:none}
+.color-chip-grid .grid-area .item {overflow:hidden;position: absolute;margin:0 1.86vw;width:44vw;z-index: 1;will-change: transform}
+.color-chip-grid .grid-area .item.muuri-item-positioning {z-index: 2}
+.color-chip-grid .grid-area .item.muuri-item-dragging,
+.color-chip-grid .grid-area .item.muuri-item-releasing {z-index: 9999}
+.color-chip-grid .grid-area .item.muuri-item-dragging {cursor: move}
+.color-chip-grid .grid-area .item.muuri-item-hidden {z-index: 0}
+.color-chip-grid .grid-area .item-content {position: relative;width: 100%;height: 100%;background-color:#fff}
+.color-chip-grid .grid-area .card {position: relative;-webkit-transition: all 0.2s ease-out;-moz-transition: all 0.2s ease-out;-ms-transition: all 0.2s ease-out;-o-transition: all 0.2s ease-out;transition: all 0.2s ease-out}
+.color-chip-grid .grid-area .card-remove {position: absolute;right:5px;top:5px;width:25px;height:25px;background:url('/mc-static-root/image/product/ico_color_delete.png') no-repeat center center;background-size:25px 25px;text-indent:-99999px;cursor: pointer;z-index:999999}
+.color-chip-grid .grid-area .item-info{position:relative;padding:11px 0 15px}
+.color-chip-grid .grid-area .item-info .thumb{overflow:hidden;display:inline-block;position:absolute;top:11px;left:0;width:26px;height:26px}
+.color-chip-grid .grid-area .item-info .thumb img{width:26px;height:auto}
+.color-chip-grid .grid-area .item-info .prd_name{display:block;padding:0 32px;width:100%;height:26px;line-height:26px;text-align:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden}
+.color-chip-grid .grid-area .item-info .prd_cart{display:inline-block;position:absolute;top:11px;right:0;width:26px;height:26px;background:#fff url('/mc-static-root/image/comm/ico_basket.png') no-repeat center center;background-size:15px 18px;text-indent:-99999px}
+.color-chip-grid .grid-area .muuri-item-placeholder{border:2px dashed #eee}
+
+.add-items-container{overflow:hidden;position:relative;padding:0 3.99vw}
+.add-items-container .swiper-wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;width:100%}
+.add-items-container .swiper-wrapper .swiper-slide {overflow:hidden;width:52px !important;height:52pxdisplay: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center}
+.add-items-container .swiper-slide a{position:relative;display:block;width:52px;height:52px}
+.add-items-container .swiper-slide a.select::before{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('/mc-static-root/image/product/ico_color_select.png') no-repeat center;background-size:52px 52px;box-sizing:border-box}
+.add-items-container .swiper-slide img{width:52px;height:52px}
+.add-items-container .swiper-slide a.sold_out .dim{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('/mc-static-root/image/product/ico_color_soldout.png') no-repeat center center;background-size:52px 52px;font-size:0;text-indent:-99999px}
+
+.add-items-container .swiper-scrollbar{position:relative;margin:15px 0 0;height:2px;background:#e5e5e5}
+.add-items-container .swiper-scrollbar .swiper-scrollbar-drag{height:2px;background-color:#000}
+
+/********** e : 컬러칩 (문혜주) **********/

@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=360, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link rel="apple-touch-icon" href="" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>LUXROBO - mobile</title>
+  <meta name="robots" content="noindex,noarchive" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" type="text/css" href="http://todamsoft.com:8080/common/css/base.css">
+  <link rel="stylesheet" type="text/css" href="http://todamsoft.com:8080/common/css/fullpage.css">
+  <script type="text/javascript" src="http://todamsoft.com:8080/common/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="http://todamsoft.com:8080/common/js/swiper.min.js"></script>
+  <script type="text/javascript" src="http://todamsoft.com:8080/common/js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://todamsoft.com:8080/luxrobo/css/module.css">
+  <link rel="stylesheet" type="text/css" href="http://todamsoft.com:8080/luxrobo/css/luxrobo_mo.css">
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="luxrobo_ui_mo.js"></script>
+</head>
+
+<body>
+
+  <!-- accessibility -->
+  <div id="accessibility">
+    <a href="#container" title="본문 내용 바로 이동">본문 내용 바로가기</a>
+  </div>
+
+  <!-- header -->
+
+
+
+  <header id="header">
+    <div class="header_wrap">
+
+      <div class="header_top">
+
+
+        <div class="left">
+          <a href="javascript:;" class="all_menu" onclick="Luxrobo.common.allMenu();">전체메뉴</a>
+        </div>
+
+        <h1 class="logo user_menu_hide">
+          <a href="javascript:void(0);">luxrobo</a>
+        </h1>
+
+
+        <div class="right">
+          <a href="javascript:;" onclick="fnUserUtilOpen()" class="user_menu user_menu_hide"></a>
+          <ul class="user_util">
+            <li><a href="/main/users/join.do">회원가입</a></li>
+            <li><a href="/main/users/login.do">로그인</a></li>
+            <li><a href="javascript:;" onclick="fnUserUtilClose();" class="close_all"><span>닫기</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header_bottom gnb-swiper-container">
+        <ul id="menu" class="swiper-wrapper">
+          <li class="active swiper-slide"><a href="#mission"><span>Mission</span></a></li>
+          <li class="swiper-slide"><a href="#ceo"><span>CEO</span></a></li>
+          <li class="swiper-slide"><a href="#history"><span>History</span></a></li>
+          <li class="swiper-slide"><a href="#partners"><span>Partners</span></a></li>
+          <li class="swiper-slide"><a href="#notice"><span>News & Notice</span></a></li>
+          <li class="swiper-slide"><a href="#contact"><span>Contact</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <div id="layer_all">
+    <div class="inner">
+      <ul class="menu_modi">
+        <li class="depth01" title="_blank"><a href="/main/index.do" target="_blank">MODI</a></li>
+        <li class="depth02">
+          <a href="/modi/modi/hello.do" target="_blank">MODI</a>
+          <ul class="depth03">
+            <li><a href="/modi/modi/hello.do" target="_blank">Hello MODI</a></li>
+            <li><a href="/modi/modi/block.do" target="_blank">MODI Block</a></li>
+            <li><a href="/modi/modi/software.do" target="_blank">MODI Software</a></li>
+          </ul>
+        </li>
+
+        <li class="depth02">
+          <a href="/modi/class/index.do" target="_blank">CLASS</a>
+          <ul class="depth03">
+            <li><a href="/modi/class/class.do" target="_blank">MODI Class</a></li>
+            <li><a href="/modi/class/curriculum.do" target="_blank">Curriculum</a></li>
+            <li><a href="/modi/class/inquiry_apply.do" target="_blank">Inquiry &amp; Apply</a></li>
+          </ul>
+        </li>
+
+        <li class="depth02">
+          <a href="/modi/lets/index.do" target="_blank">Let’s</a>
+          <ul class="depth03">
+            <li><a href="/modi/lets/lets.do" target="_blank">Let’s MODI</a></li>
+            <li><a href="/modi/lets/forum.do" target="_blank">Forum</a></li>
+            <li><a href="/modi/lets/creations.do" target="_blank">Creation</a></li>
+            <li><a href="/modi/lets/download.do" target="_blank">Download</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="menu_luxrobo">
+        <li class="depth01" title=""><a href="/luxrobo/index.do" target="">LUXROBO</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#mission" target="">Mission</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#ceo" target="">CEO</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#history" target="">History</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#partners" target="">Partners</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#notice" target="">News &amp; Notice</a></li>
+        <li class="depth02"><a href="/luxrobo/index.do#contact" target="">Contact</a></li>
+      </ul>
+      <ul class="menu_shop">
+        <li class="depth01"><a href="https://smartstore.naver.com/modimodi" target="_blank">SHOP</a></li>
+        <li class="depth02"><a href="https://smartstore.naver.com/modimodi" target="_blank">Kit</a></li>
+        <li class="depth02"><a href="https://smartstore.naver.com/modimodi" target="_blank">Block</a></li>
+        <li class="depth02"><a href="https://smartstore.naver.com/modimodi" target="_blank">Making Pack</a></li>
+        <li class="depth02"><a href="https://smartstore.naver.com/modimodi" target="_blank">Accessory</a></li>
+      </ul>
+      <a href="javascript:;" class="close_all"><span>닫기</span></a>
+    </div>
+  </div>
+
+  <!-- fullpage -->
+  <div id="fullpage">
+
+
+
+    <style>
+      /* 샘플용 스타일 */
+      body {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      /* 기존 스타일에 추가 */
+      .img_wrap {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+    </style>
+
+    <div class="section active mission" data-anchor="mission">
+      <div class="title_wrap">
+        <h2>
+          “로봇테크로 밝은 미래를 만들다.”
+
+
+        </h2>
+        <p class="txt">
+
+          각각의 기능을 가진 모듈들을 연결하듯,<br>
+          다양한 사람들이 서로 연결할 때 우리는 <br>
+          새로운 상호 관계 속에서 혁신적인 세상을 창조할 수 있습니다.
+
+
+
+        </p>
+      </div>
+      <!-- 2020.02.16 삭제 -->
+      <!-- <div class="img_wrap">
+        <div id="animation_container" style="background-color:rgba(153, 153, 153, 0.00); width:3840px; height:240px; margin-left: calc(-1920px + 50%); ">
+          <canvas id="canvas" width="3840" height="240" style="position: absolute; display: block; background-color:rgba(153, 153, 153, 0.00);"></canvas>
+          <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:3840px; height:240px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+        </div>
+      </div> -->
+      <!-- //2020.02.16 삭제 -->
+
+      <a href="javascript:;" class="btn_scroll" data-anchors="ceo"><img src="../luxrobo/images/img_scrolldown.png" /></a>
+    </div>
+
+
+    <div class="section sub_section ceo" data-anchor="ceo">
+
+      <div class="section_inner">
+        <h2 class="section_tit"><span>CEO</span></h2>
+        <div class="ceo_content">
+          <div class="section_content">
+            <div class="ceo_info">
+              <p class="ceo_name">
+                럭스로보 CEO 오상훈
+
+
+              </p>
+              <ul class="ceo_history">
+
+                <li>연세대 전기 전자 석사 졸업, 박사과정 재학 중</li>
+                <li>2019 교육부총리 미래교육 위원회 위원 </li>
+                <li>2019 서울 장학재단 비상임 이사</li>
+                <li>2018 Forbes 미래를 이끌 30인의 리더 선정</li>
+                <li>2018 국회 미래자문위원</li>
+                <li>2017 벤처기업협회 스타트업 자문 위원</li>
+                <li>로봇 기술 관련 수상경력 180회</li>
+                <li>5년간 세계 로봇대회 대한민국 국가대표 코치</li>
+
+
+
+              </ul>
+            </div>
+            <div class="ceo_msg">
+              <p class="txt">
+
+                어린 시절 저의 꿈은 화성 탐사 로봇을 만드는 것이었습니다. 그 꿈을 따라 로봇을 만들다 오늘날 ‘럭스로보(LUXROBO)’라는 스타트업을 운영하고 있습니다. ‘럭스로보’라는 이름은 빛(lux, 빛의 단위)과 로봇(robot)을 합쳐 만든 이름으로, 로봇기술을 활용해 스마트하고 밝은 미래를 만들자는 큰 포부를 담고 있습니다.<br>
+                럭스로보는 로봇을 안정적이고 유기적으로 제어할 수 있는 반도체 OS를 개발하였고, 저렴한 반도체로도 고가의 제품과 견줄 수 있는 3단 압축방식의 통신 기술, 가상화 파라미터, 멀티 컴파일 등 로봇 기반 기술을 보유하고 있습니다. 이 기술들을 활용해 2014년 ‘모디(MODI)’라는 작은 모듈형 로봇을 만들었습니다.<br>
+                모디는 어린 학생들이 무엇이든 만들 수 있는 모듈형 로봇 소프트웨어 제품입니다.<br>
+                장난감처럼 재미있게 가지고 놀다 보면 로봇의 작동 원리뿐만 아니라 기초 과학과 코딩에 대해 쉽고 자연스럽게 배울 수 있습니다. 이러한 특장점을 가진 모디는 부산시 교육청을 비롯해 전 세계 50개국의 교육기관들에서 모디를 소프트웨어 제품으로 채택하고 있습니다. 모디를 통해 현실적인 소프트웨어 교육을 돕고 아이들의 잠재력을 키울 수 있도록 노력하고 있습니다.<br>
+                럭스로보는 여기서 멈추지 않고 모디의 성공을 발판으로 IoT 사업으로 영역을 확장하고자 R&D에 큰 힘을 쏟고 있습니다. 앞으로도 우리 럭스로보는 로봇기술을 활용해 미래를 밝게 만들자는 첫 다짐과 젊은 에너지를 잃지 않고 힘차게 나아가겠습니다.<br>
+                감사합니다.
+
+
+
+              </p>
+              <p class="sign">
+                <img src="/luxrobo/images/ceo_sign.png" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section sub_section history" data-anchor="history">
+
+      <div class="section_inner">
+        <h2 class="section_tit"><span>History</span></h2>
+        <div class="section_content history_content">
+          <dl class="definition">
+            <dt class="bold">2019</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>CES Innovation Award Robotics Winner</li>
+                <li>산업통상사원부 에듀테크 비즈니스 모델 대상</li>
+                <li>교원과 파트너쉽</li>
+
+
+
+              </ul>
+            </dd>
+            <dt>2018</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>IF Design Award Winner</li>
+                <li>Arduino와 업무협약(MOU) 체결</li>
+                <li>한국과학창의 재단 우수과학문화상품 선정</li>
+                <li>한화생명, 한화건설과 IoT 사업 파트너쉽</li>
+                <li>부산시 교육청과 업무협약(MOU) 체결</li>
+                <li>한국산업은행 투자유치</li>
+
+
+
+              </ul>
+            </dd>
+          </dl>
+          <dl class="definition">
+            <dt>2017</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>Reddot Design Award Winner</li>
+                <li>KOTRA 수출 혁신상</li>
+                <li>K-Startup 최우수상 (국무총리상)</li>
+                <li>한국중등교장협의회와 업무협약(MOU) 체결</li>
+                <li>카카오 브레인 투자유치</li>
+
+
+
+              </ul>
+            </dd>
+            <dt>2016</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>한국디자인진흥원 GOOD DESIGN 수상</li>
+                <li>K-ICT 스마트 디바이스 대상 (미래창조과학부 장관상)</li>
+                <li>영국 공교육 교구 공급업체 TSL과 납품계약</li>
+                <li>Echelon Asia Summit Top 11</li>
+                <li>한화 인베스트먼트, 미래에셋 벤처케피탈 투자 유치</li>
+
+
+
+              </ul>
+            </dd>
+          </dl>
+          <dl class="definition">
+            <dt>2015</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>중소기업청 최우수 청년기업 선정</li>
+                <li>㈜럭스로보 기술연구소 설립</li>
+                <li>퓨처플레이 투자유치</li>
+
+
+
+              </ul>
+            </dd>
+            <dt>2014</dt>
+            <dd>
+              <ul class="history_list">
+
+                <li>(주) 럭스로보 설립</li>
+                <li>국내 최초 모듈형 Robotics Platform 개발</li>
+                <li>World ROBOFEST Championship 1st Place</li>
+
+
+
+              </ul>
+            </dd>
+          </dl>
+          <dl class="definition awards">
+            <dt>Awards</dt>
+            <dd><img src="/luxrobo/images/img_awards.png" /></dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="section sub_section partners" data-anchor="partners">
+      <div class="section_inner">
+        <h2 class="section_tit"><span>Partners</span></h2>
+        <div class="section_content partners_content">
+          <dl class="definition">
+            <dt class="bold">Investment</dt>
+            <dd>
+              <img src="/luxrobo/images/img_invest.jpg">
+            </dd>
+          </dl>
+          <dl class="definition">
+            <dt class="bold">2018</dt>
+            <dd>
+              <img src="/luxrobo/images/img_collabo.jpg">
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section sub_section notice" data-anchor="notice">
+      <div class="section_inner">
+        <h2 class="section_tit"><span>News & Notice</span></h2>
+        <div class="section_content notice_content">
+          <div class="top_news_area">
+            <span class="top_label">Top news</span>
+            <div class="news-swiper-pagination"></div>
+            <!-- swiper -->
+            <div class="top_news_container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <a href="/luxrobo/news/view.do?idx=88" class="txt">1. 한밭대, 스마트 로봇 글로벌 기업 ㈜럭스로보와 협약</a>
+                  <span class="date">2020.01.28</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="/luxrobo/news/view.do?idx=87" class="txt">2. 영국교육기술박람회 참가한 韓 스타트업, 베트남 기업과 MOU 체결</a>
+                  <span class="date">2020.01.28</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="/luxrobo/news/view.do?idx=86" class="txt">3. [CES 2019]Luxrobo, 모듈형 IoT 키트 ‘MODI’ 소개</a>
+                  <span class="date">2020.01.28</span>
+                </div>
+
+              </div>
+            </div>
+            <!-- //swiper -->
+          </div>
+          <div class="news_area">
+            <span class="label">News</span>
+            <ul class="news_list">
+
+              <li>
+                <a href="/luxrobo/news/view.do?idx=88">
+                  <p class="thumb" style="background:url('/upload/923cdadde3a34e2a9523e30cd23686cc.jpg') center center; background-size:cover"></p>
+                  <p class="tit ellipsis">한밭대, 스마트 로봇 글로벌 기업 ㈜럭스로보와 협약</p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/luxrobo/news/view.do?idx=87">
+                  <p class="thumb" style="background:url('/upload/81bc1e20b1814060b999dad9754d0fe2.jpg') center center; background-size:cover"></p>
+                  <p class="tit ellipsis">영국교육기술박람회 참가한 韓 스타트업, 베트남 기업과 MOU 체결</p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/luxrobo/news/view.do?idx=86">
+                  <p class="thumb" style="background:url('/upload/2b9c7659153f4045bc0d3f565f408f67.jpg') center center; background-size:cover"></p>
+                  <p class="tit ellipsis">[CES 2019]Luxrobo, 모듈형 IoT 키트 ‘MODI’ 소개</p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+            </ul>
+            <div class="more_area">
+              <a href="/luxrobo/news/list.do" class="more">더보기</a>
+            </div>
+          </div>
+          <div class="notice_area">
+            <span class="label">Notice</span>
+            <ul class="notice_list">
+
+
+              <li>
+                <a href="/luxrobo/notice/view.do?idx=85" class="item">
+                  <p class="tit ellipsis">[MODI] 신주발행공고</p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/luxrobo/notice/view.do?idx=84" class="item">
+                  <p class="tit ellipsis">[MODI] A/S 신청 방법 </p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/luxrobo/notice/view.do?idx=83" class="item">
+                  <p class="tit ellipsis">[MODI] 정품 인증 및 AS 신청 기능 일시 정지 안내드립니다.</p>
+                  <span class="date">2020.01.28</span>
+                </a>
+              </li>
+
+            </ul>
+            <div class="more_area">
+              <a href="/luxrobo/notice/list.do" class="more">더보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var swiper = new Swiper('.top_news_container', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: '.news-swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+
+
+    <div class="section sub_section contact" data-anchor="contact">
+      <div class="section_inner">
+        <h2 class="section_tit"><span>contact</span></h2>
+        <div class="section_content contact_content">
+          <div class="map_wrap" id="map_canvas">
+          </div>
+          <div class="address_wrap">
+            <span class="name">럭스로보</span>
+            <span class="address">
+              서울 특별시 서초구 강남대로 311, 13층 (드림플러스 강남)
+
+
+            </span>
+            <p class="util">
+              <span>1544-8260</span>
+              <a href="mailto:connect@luxrobo.com">connect@luxrobo.com</a>
+            </p>
+          </div>
+          <div class="down_wrap">
+            <a href="/files/Luxrobo_Profile_ko.pdf" target="_blank">회사소개서 다운받기</a>
+            <a href="javascript:;" onClick="Luxrobo.common.layerPopupOpen(this);" data-target="cibi">CI / BI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src=" http://maps.google.com/maps/api/js?v=3.3&sensor=true&key=AIzaSyAEVlAIJybD_oYWU-afMTU-9ljj5SgyNHM"></script>
+    <script type="text/javascript">
+      function initialize() {
+        //37.4908712,127.0280546
+        //37.4908503,127.0280925,17z
+        var myLatlng = new google.maps.LatLng(37.4908712, 127.0280925);
+        var myOptions = {
+          zoom: 15,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: "서울 특별시 서초구 강남대로 311, 13층 (드림플러스 강남)" //<- 본인의 목적에 맞게수정
+        });
+        var infowindow = new google.maps.InfoWindow({
+          content: "서울 특별시 서초구 강남대로 311, 13층 (드림플러스 강남)" //<- 본인의 목적에 맞게수정
+        });
+        infowindow.open(map, marker);
+      }
+      window.onload = function() {
+        initialize();
+      }
+    </script>
+
+    <!-- footer -->
+    <div class="section footer">
+      <div class="section_inner">
+
+
+        <footer id="footer">
+          <div class="footer_top">
+            <div class="inner">
+              <a href="/luxrobo/index.do" class="footer_logo"><img src="/main/images/logo_luxrobo.png" alt="luxrobo"></a>
+              <address>
+
+                서울특별시 서초구 강남대로 311 13층 (드림플러스 강남)<br>
+                1544-8260 | connect@luxrobo.com
+
+
+
+              </address>
+            </div>
+          </div>
+          <div class="footer_middle">
+            <div class="inner">
+              <ul class="terms_link">
+                <li><a href="/main/agreement.do" title="이용약관">이용약관</a></li>
+                <li><a href="/main/customer_privacy.do" title="개인정보보호정책" class="bold">개인정보보호정책</a></li>
+              </ul>
+              <ul class="sns_link">
+                <li><a href="https://www.facebook.com/luxrobo/" target="_blank" class="facebook" title="facebook">facebook</a></li>
+                <li><a href="https://www.instagram.com/luxrobo/" target="_blank" class="instargram" title="instargram">instargram</a></li>
+                <li><a href="https://www.youtube.com/channel/UCAWa6Gi9A3UdS4UemBo_6ug" target="_blank" class="youtube" title="youtube">youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="inner">
+              <ul class="footer_sitemap">
+                <li>
+                  <div>
+                    <p class="depth_01"><a href="/luxrobo/index.do">LUXROBO</a></p>
+                    <ul class="depth_02">
+                      <li><a href="/luxrobo/index.do#mission" target="">Mission</a></li>
+                      <li><a href="/luxrobo/index.do#ceo" target="">CEO</a></li>
+                      <li><a href="/luxrobo/index.do#history" target="">History</a></li>
+                      <li><a href="/luxrobo/index.do#partners" target="">Partners</a></li>
+                      <li><a href="/luxrobo/index.do#notice" target="">News &amp; Notice</a></li>
+                      <li><a href="/luxrobo/index.do#contact" target="">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="depth_01"><a href="/main/index.do">MODI</a></p>
+                    <ul class="depth_02">
+                      <li><a href="/modi/modi/index.do" target="_blank">MODI</a></li>
+                      <li><a href="/modi/class/index.do" target="_blank">CLASS</a></li>
+                      <li><a href="/modi/lets/index.do" target="_blank">LET'S</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <p class="depth_01">고객센터</p>
+                    <ul class="depth_02">
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">FAQ</a></li>
+
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">1:1문의</a></li>
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">주문배송조회</a></li>
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">CS정책안내</a></li>
+
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="depth_01"><a href="https://smartstore.naver.com/modimodi" target="_blank">SHOP</a></p>
+                    <ul class="depth_02">
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">Kit</a></li>
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">Block</a></li>
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">Making Pack</a></li>
+                      <li><a href="https://smartstore.naver.com/modimodi" target="_blank">Accessory</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="down">
+                  <p class="depth_01">다운로드</p>
+                  <ul class="depth_02">
+                    <li>
+                      <dl>
+                        <dt>MODI Studio</dt>
+                        <dd><a href="/files/MODIStudioSetup-1.8.1.exe" target="_blank" class="window">Windows</a></dd>
+                        <dd><a href="/files/MODIStudioSetup-1.8.1.dmg" target="_blank" class="apple">MacOs</a></dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="down">
+                        <dt>MODI Play</dt>
+                        <dd><a href="https://play.google.com/store/apps/details?id=com.luxrobo.modiplay" target="_blank" class="google">Google Play</a></dd>
+                        <dd><a href="https://apps.apple.com/kr/app/modi-play/id1338477211?l=en" target="_blank" class="apple">App Store</a></dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="copy">Copyright LUXROBO Co., Ltd. All Rights Reserved © 2020</p>
+            </div>
+          </div>
+
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="dim"></div>
+
+
+
+  <div class="layerPopup layer_block" id="cibi">
+    <div class="layer_title">CI / BI</div>
+    <div class="layer_content">
+      <dl class="luxrobo">
+        <dt class="depth01">
+          <p class="tit">럭스로보 (LUXROBO)</p>
+          <p class="sub_tit">LUX + ROBOT</p>
+        </dt>
+        <dd class="depth01">
+          <p class="txt">럭스로보(LUXROBO)는 빛의 단위를 뜻하는 럭스(lux)와 로봇(robot)의 합성어로 로봇 테크로 밝은 미래 를 만들자는 포부를 담은 이름입니다. 로고의 정육면체는 서로 다른 사회, 세상을 의미하며 포인트는 럭스로보의 기술과 플랫폼을 뜻합니다. 이는 럭스로보의 설립 이념을 상징적으로 드러냅니다. </p>
+        </dd>
+        <dt class="depth02">
+          <p class="tit">Corporation Identity (C.I)</p>
+        </dt>
+        <dd class="depth02">
+          <p class="logo"><img src="/luxrobo/images/logo_luxrobo02.png" /></p>
+          <div class="cibi_down">
+            <a class="btn_cidi" href="/files/ci_luxrobo_png.zip" target="_blank"><span>PNG</span></a>
+            <a class="btn_cidi" href="/files/ci_luxrobo_eps.zip" target="_blank"><span>EPS</span></a>
+          </div>
+        </dd>
+      </dl>
+      <dl class="modi">
+        <dt class="depth01">
+          <p class="tit">모디 (MODI)</p>
+          <p class="sub_tit">CONNECT & CREATE</p>
+        </dt>
+        <dd class="depth01">
+          <p class="txt">모디(MODI)는 하나의 구성단위를 뜻하는 영어 모듈(Module)과 연결 부분을 의미하는 한국어 ‘마디’의 조합으로 만들어진 이름입니다. 이는 각각의 기능을 가진 모듈들을 연결해 새로운 창작품을 만드는 모디의 특징을 상징합니다. 부드러운 라운드 디자인으로 사각형의 모듈을 친근하게 표현합니다. </p>
+        </dd>
+        <dt class="depth02">
+          <p class="tit">Brand Identity (B.I)</p>
+        </dt>
+        <dd class="depth02">
+          <p class="logo"><img src="/luxrobo/images/logo_modi.png" /></p>
+          <div class="cibi_down">
+            <a class="btn_cidi" href="/files/bi_modi_png.zip" target="_blank"><span>PNG</span></a>
+            <a class="btn_cidi" href="/files/bi_modi_eps.zip" target="_blank"><span>EPS</span></a>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="color">
+        <dt class="depth01">
+          <p class="tit">Brand Color</p>
+        </dt>
+        <dd class="depth01">
+          <p class="txt">모디는 4가지의 브랜드 컬러를 사용하고 있습니다. 미래적이고 전자적이며 창의적 색상을 표현하는Celadon blue를 메인 색상으로 사용합니다. 이와 함께 보라색, 주황색, 노란색의 조화를 통해 모듈의 기능을 표현합니다. </p>
+        </dd>
+        <dt class="depth02">
+          <p class="tit">Main Color</p>
+        </dt>
+        <dd class="depth02">
+          <ul class="color_list">
+            <li class="cl_main">
+              <span class="cl_name">Celadon Blue</span>
+              <div class="cl_info">
+                <p>PANTONE 319C</p>
+                <p>R 69 / G 214 / B 223</p>
+                <p>C 62 / M 0 / Y 22 / K 0</p>
+                <p>#45d6df</p>
+              </div>
+            </li>
+          </ul>
+        </dd>
+        <dt class="depth02">
+          <p class="tit">Sub Color</p>
+        </dt>
+        <dd class="depth02">
+          <ul class="color_list">
+            <li class="cl_sub" style="background-color:#ffca28">
+              <span class="cl_name">Candle Yellow</span>
+              <div class="cl_info">
+                <p>R 255 / G 202 / B 40</p>
+                <p>C 0 / M 27 / Y 84 / K 0</p>
+                <p>#ffca28</p>
+              </div>
+            </li>
+            <li class="cl_sub" style="background-color:#ff7550">
+              <span class="cl_name">Coral Orange</span>
+              <div class="cl_info">
+                <p>R 255 / G 117 / B 80</p>
+                <p>C 0 / M 68 / Y 64 / K 0</p>
+                <p>#ff7550</p>
+              </div>
+            </li>
+            <li class="cl_sub" style="background-color:#7873f0">
+              <span class="cl_name">Electric Violet</span>
+              <div class="cl_info">
+                <p>R 120 / G 115 / B 240</p>
+                <p>C 67 / M 58 / Y 0 / K 0</p>
+                <p>#7873f0</p>
+              </div>
+            </li>
+            <li class="cl_sub" style="background-color:#4d5d6b">
+              <span class="cl_name">River Grey</span>
+              <div class="cl_info">
+                <p>R 77 / G 93 / B 107</p>
+                <p>C 28 / M 0 / Y 0 / K 74</p>
+                <p>#4d5d6b</p>
+              </div>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <a href="javascript:;" class="layer_close" onclick="Luxrobo.common.layerPopupClose(this);">닫기</a>
+  </div>
+  test
+
+</body>
+
+</html>
